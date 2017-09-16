@@ -3,4 +3,4 @@ Jinja2
 mock
 cattle
 azure
-azure-storage==0.35.1
+azure-storage==0.20.3
