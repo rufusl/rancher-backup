@@ -20,7 +20,7 @@ ENV CONFD_PREFIX_KEY="/backup" \
 # Add libs & tools
 COPY backup/requirements.txt /${APP_HOME}/
 RUN apk update && \
-    apk add python2 py-pip bash tar curl docker duplicity lftp ncftp py-paramiko py-gobject py-boto py-lockfile ca-certificates librsync py-cryptography py-cffi build-base &&\
+    apk add python2 py-pip bash tar curl docker duplicity lftp ncftp py-paramiko py-gobject py-boto py-lockfile ca-certificates librsync py-cryptography py-cffi build-base python-dev &&\
     pip install --upgrade pip &&\
     pip install -r "${APP_HOME}/requirements.txt" &&\
     rm /var/cache/apk/*
